@@ -5,7 +5,10 @@ import android.os.Bundle;
 import android.util.Log;
 import android.widget.Toast;
 
+import com.anjalil.admin.family.person.Marriage;
 import com.anjalil.admin.family.person.Person;
+
+import java.util.Date;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -13,9 +16,10 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Person b = new Person("emma watson",1992,"female");
-        Person a = new Person("Ajith",1995,"Male",b);
+        Person a = new Person("AjithKumar A K",1995,"MALE");
+        Person b = new Person("emma watson",1992,"FEMALE");
+        Marriage marriage = new Marriage(a,b,new Date(2017,04,21),"Coavai");
         Log.i("HI",a.getName());
-        Toast.makeText(MainActivity.this,a.getWifeName(),Toast.LENGTH_LONG).show();
+        Toast.makeText(MainActivity.this,marriage.getSpouse(a).getName(),Toast.LENGTH_LONG).show();
     }
 }

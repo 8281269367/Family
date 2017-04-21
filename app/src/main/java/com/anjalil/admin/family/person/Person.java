@@ -8,7 +8,6 @@ public class Person {
     private String name = "";
     private int year_of_birth;
     private String gender;
-    Person wife;
 
     public Person(String name,int yob,String gender){
         this.gender = gender;
@@ -16,12 +15,11 @@ public class Person {
         this.year_of_birth = yob;
 
     }
-    public Person(String name,int yob,String gender,Person wife){
-        this.gender = gender;
+
+    public Person(String name) {
         this.name = name;
-        this.year_of_birth = yob;
-        this.wife = wife;
     }
+
     public String getName(){
         return this.name;
     }
@@ -33,7 +31,5 @@ public class Person {
     {
         return this.gender;
     }
-    public String getWifeName(){
-        return this.wife.name;
-    }
+
 }
