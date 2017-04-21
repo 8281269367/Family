@@ -20,6 +20,6 @@ public class MainActivity extends AppCompatActivity {
         Person b = new Person("emma watson",1992,"FEMALE");
         Marriage marriage = new Marriage(a,b,new Date(2017,04,21),"Coavai");
         Log.i("HI",a.getName());
-        Toast.makeText(MainActivity.this,marriage.getSpouse(a).getName(),Toast.LENGTH_LONG).show();
+        Toast.makeText(MainActivity.this,marriage.getSpouse(a).getName()+" "+marriage.getSpouse(a).getGender(),Toast.LENGTH_LONG).show();
     }
 }

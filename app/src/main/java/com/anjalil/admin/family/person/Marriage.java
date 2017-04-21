@@ -11,12 +11,15 @@ public class Marriage {
     private String address_of_marriage,name_of_husband,name_of_wife;
     private int no_of_childs;
     private boolean validity;
+    private Person wife,husband;
 
     public Marriage(Person male,Person female,Date date_of_marriage,String address_of_marriage){
         name_of_husband = male.getName();
         name_of_wife = female.getName();
         this.date_of_marriage = date_of_marriage;
         this.address_of_marriage = address_of_marriage;
+        this.wife = female;
+        this.husband = male;
 
     }
 
@@ -24,12 +27,10 @@ public class Marriage {
         return this.date_of_marriage;
     }
     public Person getSpouse(Person person) {
-        Person person1 = null;
         if (person.getGender() == "MALE") {
-            person1 = new Person(this.name_of_wife);
+            return this.wife;
         }else
-            person1 = new Person(this.name_of_husband);
-        return person1;
+            return this.husband;
     }
 }
 
