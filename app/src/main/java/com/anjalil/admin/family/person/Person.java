@@ -1,18 +1,20 @@
 package com.anjalil.admin.family.person;
 
+import java.util.Date;
+
 /**
  * Created by admin on 4/20/2017.
  */
 
 public class Person {
     private String name = "";
-    private int year_of_birth;
+    private Date date_of_birth;
     private String gender;
 
-    public Person(String name,int yob,String gender){
+    public Person(String name, Date yob, String gender){
         this.gender = gender;
         this.name = name;
-        this.year_of_birth = yob;
+        this.date_of_birth = yob;
 
     }
 
@@ -24,8 +26,8 @@ public class Person {
         return this.name;
     }
 
-    public int getYear_of_birth(){
-        return this.year_of_birth;
+    public Date getDate_of_birth(){
+        return this.date_of_birth;
     }
     public String getGender()
     {
